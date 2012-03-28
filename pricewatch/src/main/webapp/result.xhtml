@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:ui="http://java.sun.com/jsf/facelets"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:h="http://java.sun.com/jsf/html"
+   template="/WEB-INF/templates/template.xhtml">
+   <ui:define name="content">
+   		<h1>Result:</h1>
+	   	<h:form>
+	   		<h:panelGrid columns="2">
+	   			<h:outputLabel for="name" value="Name:"></h:outputLabel>
+	   			<h:outputText id="name" value="#{controller.result.name}"></h:outputText>
+	   			<h:outputLabel for="price" value="Price:"></h:outputLabel>
+	   			<h:outputText id="price" value="#{controller.result.price}"></h:outputText>
+	   			<h:outputLabel for="rating" value="Rating:"></h:outputLabel>
+	   			<h:outputText id="rating" value="#{controller.result.rating}/5 (Based on #{controller.result.ratingVotes} votes)"></h:outputText>
+	   			<h:outputLabel for="retailer" value="Retailer:"></h:outputLabel>
+	   			<h:outputText id="retailer" value="#{controller.result.retailer}"></h:outputText>
+	   			<h:commandLink action="home" value="Back" />
+	   		</h:panelGrid>
+   		</h:form>
+   </ui:define>
+</ui:composition>

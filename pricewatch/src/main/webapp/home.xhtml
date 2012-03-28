@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:ui="http://java.sun.com/jsf/facelets"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:h="http://java.sun.com/jsf/html"
+   template="/WEB-INF/templates/template.xhtml">
+   <ui:define name="content">
+      <h:form>
+      	<h:messages />
+      	<h:panelGrid columns="3">
+	      	<h:outputLabel for="url" value="URL:" />
+	      	<h:inputText id="url" value="#{controller.url}" size="50" />
+	      	<h:commandButton value="Submit" action="#{controller.parse}" />
+      	</h:panelGrid>
+      </h:form>
+   </ui:define>
+</ui:composition>
